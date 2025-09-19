@@ -1,0 +1,27 @@
+@use '../abstracts/placeholders' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+// Primary btn
+.btn {
+    @extend %button;
+    // transform: scale(1);
+    background-color: $primary-color;
+    color: white;
+
+    &__shadow {
+        @include box-shadow(0, 4px, 10px, $shadow-color);
+    }
+}
+
+// Secondary btn
+.btn-secondary {
+    @extend %button;
+    // transform: scale(1);
+    background-color: white;
+    color: $text-color;
+
+    &__shadow {
+        @include box-shadow(0, 4px, 10px, $shadow-color);
+    }
+}
