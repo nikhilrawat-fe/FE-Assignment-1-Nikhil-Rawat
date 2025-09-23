@@ -1,0 +1,7 @@
+@use '../abstracts/variables' as *;
+
+:root[data-theme='light'] {
+    --background-color: #fff;
+    --text-color: #{$text-color};
+    --primary-color: #{$primary-color};
+}

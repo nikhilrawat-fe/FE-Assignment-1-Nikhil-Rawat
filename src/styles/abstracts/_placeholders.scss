@@ -1,0 +1,30 @@
+@use './mixins' as *;
+
+// placeholder for button styling
+%button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-decoration: none;
+    line-height: 1;
+    border: 0;
+    border-radius: 6.25rem;
+
+    @include respond(md) {
+        font-size: 1.4rem;
+        padding: 1.6rem 3.2rem;
+        border-radius: 10rem;
+        line-height: 1.2;
+    }
+
+    @include respond(lg) {
+        font-size: 1.4rem;
+        padding: 1.75rem 3.15rem;
+    }
+
+    &:hover {
+        opacity: 0.9;
+    }
+}

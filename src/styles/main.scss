@@ -1,31 +1,17 @@
-// TODO: Add styles as per the requirement
 // abstracts
-@use './sass/abstracts/variables';
-@use './sass/abstracts/functions';
-@use './sass/abstracts/mixins';
-@use './sass/abstracts/placeholders';
+@use './abstracts/shared' as abstracts;
 
 // base
-@use './sass/base/reset';
-@use './sass/base/typography';
+@use './base/shared' as base;
 
 // layouts
-@use './sass/layout/navigation';
-@use './sass/layout/grid';
-@use './sass/layout/header';
-@use './sass/layout/footer';
-@use './sass/layout/sidebar';
-@use './sass/layout/forms';
+@use './layout/shared' as layout;
 
 // components
-@use './sass/components/buttons';
-@use './sass/components/nav';
-
-// pages
-@use './sass/pages/home';
+@use './components/shared' as components;
 
 // themes
-@use './sass/themes/light';
+@use './themes/shared' as themes;
 
 // vendors
-@use './sass/vendors/icomoon/icons.scss';
+@use './vendors/shared' as vendors;
