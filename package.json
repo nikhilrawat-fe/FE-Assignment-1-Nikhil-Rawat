@@ -1,9 +1,12 @@
 {
-    "name": "static-html-base-template",
+    "name": "travlog",
     "description": "",
     "keywords": [],
-    "version": "0.0.0",
+    "version": "1.0.0",
     "private": true,
+    "author": {
+        "name": "Nikhil Rawat"
+    },
     "type": "module",
     "scripts": {
         "dev": "vite",
@@ -31,7 +34,7 @@
         "sass-embedded": "1.78.0",
         "sharp": "0.33.5",
         "vite": "5.4.1",
-        "vite-plugin-html": "^3.2.2",
+        "vite-plugin-html": "3.2.2",
         "vite-plugin-image-optimizer": "1.1.8"
     },
     "lint-staged": {

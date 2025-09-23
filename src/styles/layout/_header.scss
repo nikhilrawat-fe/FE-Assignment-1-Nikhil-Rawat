@@ -1,0 +1,52 @@
+@use '../abstracts/mixins' as *;
+
+.header {
+    @include flex-container(
+        $direction: row,
+        $justify: space-between,
+        $align: center,
+        $gap: 2rem
+    );
+    margin: 3.9rem 1.6rem;
+
+    .logo-container {
+        @include flex-container($align: center);
+    }
+    &__menu-icon {
+        font-size: 3.2rem;
+        cursor: pointer;
+        margin-right: 0.4rem;
+    }
+
+    @include respond(md) {
+        margin: 3.2rem 6.4rem;
+        &__menu-icon {
+            margin-left: 0.4rem;
+            @include flex-item($flex-grow: 0.32, $order: 1);
+        }
+        .logo-container {
+            margin-bottom: 0.3rem;
+            @include flex-item($order: 2);
+        }
+        &__sidebar {
+            @include flex-item($order: 3);
+            @include flex-container(
+                $direction: row,
+                $justify: space-between,
+                $align: center,
+                $gap: 2rem
+            );
+        }
+    }
+
+    @include respond(lg) {
+        margin: 6.55rem 7.8rem 0 15rem;
+        &__menu-icon {
+            display: none;
+        }
+
+        &__sidebar {
+            @include flex-item($flex-grow: 0.24);
+        }
+    }
+}

@@ -1,0 +1,40 @@
+// variables
+
+// colors
+$primary-color: #5d50c6;
+$secondary-color: #f85e9f;
+$accent-color: #ffc107;
+$text-color: #000;
+$secondary-text-color: #19182580;
+$shadow-color: #00000059;
+
+// breakpoints
+
+$mobile: 430px;
+$tablet: 1024px;
+$desktop: 1440px;
+
+// spacing
+$spacing-sm: 1rem;
+$spacing-md: 2rem;
+$spacing-lg: 4rem;
+
+// border radius
+$border-radius-sm: 0.25rem;
+$border-radius-lg: 6.25rem;
+
+// z-index layers
+$z-layers: (
+    'sidebar': 1000,
+    'modal': 2000,
+    'overlay': 3000,
+);
+
+// typography scale
+$font-size: (
+    'xs': 1.2rem,
+    'sm': 1.4rem,
+    'md': 1.6rem,
+    'lg': 2rem,
+    'xl': 2.4rem,
+);

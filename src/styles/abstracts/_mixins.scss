@@ -1,0 +1,73 @@
+@use './variables' as *;
+
+$font-path: '/assets/fonts';
+
+// Flex Container Mixin
+@mixin flex-container(
+    $direction: row,
+    $justify: flex-start,
+    $align: stretch,
+    $gap: 0
+) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+// Flex Item Mixin
+@mixin flex-item($flex-grow: 0, $flex-shrink: 1, $flex-basis: auto, $order: 0) {
+    flex-grow: $flex-grow;
+    flex-shrink: $flex-shrink;
+    flex-basis: $flex-basis;
+    order: $order;
+}
+
+// Media Query Mixin
+@mixin respond($breakpoint) {
+    @if $breakpoint == sm {
+        @media (max-width: $mobile) {
+            @content;
+        }
+    } @else if $breakpoint == md {
+        @media (min-width: ($mobile + 1)) and (max-width: $tablet) {
+            @content;
+        }
+    } @else if $breakpoint == lg {
+        @media (min-width: ($tablet + 1)) {
+            @content;
+        }
+    } @else {
+        @warn "No media query defined for `#{$breakpoint}`.";
+    }
+}
+
+// Box Shadow Mixin
+@mixin box-shadow(
+    $x: 0,
+    $y: 2px,
+    $blur: 5px,
+    $spread: 0,
+    $color: $shadow-color
+) {
+    box-shadow: $x $y $blur $spread $color;
+}
+
+// Sidebar transition
+@mixin sidebar-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// font-face
+@mixin font-face($family, $file, $weight: normal, $style: normal) {
+    @font-face {
+        font-family: $family;
+        src:
+            url('#{$font-path}/#{$file}.woff2') format('woff2'),
+            url('#{$font-path}/#{$file}.ttf') format('truetype');
+        font-weight: $weight;
+        font-style: normal;
+        font-display: swap;
+    }
+}

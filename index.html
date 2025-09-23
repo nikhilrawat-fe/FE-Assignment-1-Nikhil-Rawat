@@ -1,15 +1,72 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>Travlog</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="src/styles/main.scss" />
-        <link rel="icon" type="image/svg" href="/assets/images/logo.svg" />
+        <link rel="icon" type="image/svg+xml" href="/assets/images/logo.svg" />
     </head>
     <body>
-        <div>Hello World</div>
-
+        <header class="header">
+            <div class="logo-container">
+                <img src="/assets/images/logo.svg" alt="Travlog" />
+            </div>
+            <i
+                class="icon-menu header__menu-icon"
+                role="button"
+                aria-label="Open menu"
+                tabindex="0"
+            ></i>
+            <div
+                class="sidebar header__sidebar"
+                role="navigation"
+                aria-label="Main navigation"
+            >
+                <i
+                    class="icon-close sidebar__close-icon"
+                    role="button"
+                    aria-label="Close menu"
+                    tabindex="0"
+                ></i>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link" role="link"
+                                >Home</a
+                            >
+                        </li>
+                        <li class="nav__item">
+                            <a href="#services" class="nav__link" role="link"
+                                >Discover</a
+                            >
+                        </li>
+                        <li class="nav__item">
+                            <a href="#deals" class="nav__link" role="link"
+                                >Special Deals</a
+                            >
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link" role="link"
+                                >Contact</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+                <div class="sidebar__auth-buttons">
+                    <button
+                        class="btn btn--secondary"
+                        aria-label="Log in"
+                        role="button"
+                    >
+                        Log In
+                    </button>
+                    <button class="btn" aria-label="Sign up" role="button">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+        </header>
         <script type="module" src="./src/script/index.js"></script>
     </body>
 </html>
